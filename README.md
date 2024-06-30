@@ -3,23 +3,27 @@
 Flutter project.
 
 ## Dependencies
-- flutter_polygon_clipper: ^0.0.1
-- font_awesome_flutter: ^9.0.0
+- flutter_polygon_clipper: ^1.0.4
+- font_awesome_flutter: ^10.5.0
 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### Ketentuan 
+- Gunakan penyusunan secara Stack dibagian PecelHeader
+- Gunakan SingleChildScrollView dibagian Menu bisa scroll kebawah
+- Gunakan ListView dan bisa di scroll ke kanan kiri di bagian tagmenu
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Gubakan Basic Flutter
 
 # View
 ![image](image.png)
 
 
+## Contrib
+- Nafis
+- Beta
+
+## Untuk Memenuhi UAS PAPB
+- Bapak Saiful Nur Budiman, S.Kom., M.Kom
