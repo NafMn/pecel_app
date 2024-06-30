@@ -31,7 +31,7 @@ class Screen extends StatelessWidget {
         child: TitleMenu(),
       ),
       SizedBox(
-        height: MediaQuery.of(context).size.height * 0.6, // Responsif
+        height: MediaQuery.of(context).size.height * 0.5, // Responsif
         child: MenuList(),
       ),
       SizedBox(
