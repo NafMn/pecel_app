@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class TagMenu extends StatefulWidget {
@@ -14,7 +15,7 @@ class _TagMenuState extends State<TagMenu> {
     return Scaffold(
       body: ListView(
         scrollDirection: Axis.horizontal,
-                      children: const [
+                      children: <Widget> [
                         SizedBox(
                           width: 180,
                           child: Padding(

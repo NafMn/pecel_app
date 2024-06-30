@@ -7,9 +7,11 @@ class PecelHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     var promo = Container(
       margin: EdgeInsets.only(top: 10),
-      padding: EdgeInsets.only(bottom: 10.0),
-      height: 150.0,
-      width: 230.0,
+      padding: EdgeInsets.only(bottom: 10.0,right: 2.0),
+      // height: 150.0,
+      // width: 230.0,
+      height: MediaQuery.of(context).size.height * 0.5,
+      width: MediaQuery.of(context).size.width * 0.7,
       child: Stack(
         children: [
           Container(
@@ -66,14 +68,23 @@ class PecelHeader extends StatelessWidget {
     );
 
     var row = Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children:[
-        
-        Expanded(child: promo),
-        Expanded(child: promo),
+      children:[   
+        promo,
+        promo,
+        promo,
       ],
     );
 
-    return row;
+    var list = Container(
+      height: 150,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          row
+        ]
+      ),
+    );
+
+    return list;
   }
 }

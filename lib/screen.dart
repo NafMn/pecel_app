@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_polygon_clipper/flutter_polygon_clipper.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pecelapp/pecelheader.dart';
@@ -15,21 +16,34 @@ class Screen extends StatelessWidget {
         title: Text('Pecel App | NafMn'),
         backgroundColor: Colors.yellow[200],
       ),
-      body: Column(
-        children: [
-          PecelHeader(),
-          SizedBox(
-            height: 100,
-            child: TagMenu(),
-          ),
-          SizedBox(
-            child: TitleMenu(),
-          ),
-          Expanded(
-            child: MenuList(),
-          ),
-        ],
+      body: SingleChildScrollView(
+  child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      const PecelHeader(),
+      SizedBox(
+        height: 100,
+         // Responsif
+        child: TagMenu(),
       ),
+      Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0), // Margin responsif
+        child: TitleMenu(),
+      ),
+      SizedBox(
+        height: MediaQuery.of(context).size.height * 0.6, // Responsif
+        child: MenuList(),
+      ),
+      SizedBox(
+        height: MediaQuery.of(context).size.height * 0.6, // Responsif
+        width: double.infinity,
+        child: MenuLaris(),
+      ),
+    ],
+  ),
+),
+
+      
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(
@@ -61,3 +75,26 @@ class Screen extends StatelessWidget {
     );
   }
 }
+
+
+
+
+// Column(
+//           crossAxisAlignment: CrossAxisAlignment.start,
+//           children: [
+//             const PecelHeader(),
+//             SizedBox(
+//               height: 100,
+//               width: 500,
+//               child: TagMenu(),
+//             ),
+//             SizedBox(
+//               child: TitleMenu(),
+//             ),
+//             Expanded(
+//               child: MenuList(),
+//             ),
+//             Expanded(
+//               child:MenuLaris(),)
+//           ],
+//         ),
