@@ -43,7 +43,6 @@ class Screen extends StatelessWidget {
   ),
 ),
 
-      
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(
@@ -56,23 +55,29 @@ class Screen extends StatelessWidget {
           ),
         ],
       ),
-      floatingActionButton: Container(
-        height: 90,
-        width: 80,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Align(
         alignment: Alignment.bottomCenter,
-        child: Transform.translate(
-          offset: const Offset(-140, 45), // Sesuaikan posisi vertikal
-          child: FlutterClipPolygon(
-            sides: 6,
-            child: Container(
-              color: Colors.yellow[200],
-              padding: const EdgeInsets.all(10),
-              child: const Icon(FontAwesomeIcons.book, size: 25),
+        child: Container(
+          height: 90,
+          width: 80,
+          margin: EdgeInsets.only(bottom: 10),
+            child: FlutterClipPolygon(
+              sides: 6,
+              child: Container(
+                color: Colors.yellow[200],
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(FontAwesomeIcons.book, size: 25),
+                    const Text('Menu', style: TextStyle(fontSize: 10)),
+                  ],
+                ),
+              ),
             ),
           ),
-        ),
       ),
-    );
+      );
   }
 }
 

@@ -21,9 +21,9 @@ This project is a starting point for a Flutter application.
 
 
 ## View
-- 1
+# 1
 ![image](image-1.jpg)
-- 2
+# 2
 ![image](image-2.jpg)
 
 
